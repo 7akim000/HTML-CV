@@ -1,0 +1,68 @@
+<a href="#"><button class="art">ARTICLES</button></a>
+css
+
+.art{
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 50px;
+    font-size: 22px;
+    
+    color: rgb(1, 1, 1);
+    border: 1.7px black solid; 
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.art::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(0, 200, 255);
+    left: -40px;
+    top: 18px;
+    border-radius: 7.5px;
+    transition: .5s;
+}
+.art::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(6, 200, 253);
+    right: -40px;
+    top: 18px;
+    border-radius: 7.5px;
+    transition: .5s;
+    
+}
+
+.art:hover::after{/*left*/
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translate(0px,15px);
+    border-radius: 0cap;
+    width: 1px;
+    background-color: rgb(28, 124, 197);
+    transition: .5s;
+}
+.art:hover::before{
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    transform: translate(0px,-15px);
+    border-radius: 0cap;
+    width: 1px;
+    background-color: rgb(28, 124, 197);
+    transition: .5s;
+}
+.art:hover{
+    transition: 0.8s;
+    background-color: rgb(28, 124, 197);
+    color: white;
+    border: 0cap;
+    /* width: 140px;
+    height: 45px;
+    margin: auto; */
+    scale: 0.92;
+}
